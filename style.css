@@ -7,6 +7,11 @@
     --link-underline-padding: .5em;
 }
 
+.stop-scroll{
+    overflow: hidden;
+}
+
+
 /* upper navbar */
 .navbar{
     position: fixed;
@@ -359,6 +364,10 @@ footer{
 
 
 @media only screen and (max-width: 600px) {
+
+    .hero{
+        margin-top: 55px;
+    }
 
     .pbox img{
         margin: 25px;

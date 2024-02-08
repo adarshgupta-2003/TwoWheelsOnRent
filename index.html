@@ -285,7 +285,7 @@
 
       </div>
 
-      <footer>
+      <footer class="footer">
 
         <div class="logo-section">
           <img src="./assets/img/logo.jpg" alt="">
@@ -312,7 +312,7 @@
       </footer>
 
       <div class="lower-footer">
-        <h4>Copyright © 2023 <a href="#home">TwoWheelsOnRent</a></h4>
+        <h4>Copyright © 2024 <a href="#home">TwoWheelsOnRent</a></h4>
         <h4>Developed with ❤️ by <a target=”_blank” href="https://adarshgupta.pages.dev/">Adarsh Gupta</a> & <a href="">Aniket Vishwakarma</a></h4>
       </div>
     </div>
@@ -322,13 +322,29 @@
     const popup = document.querySelector('.popup');
     
     function closePopup() {
-        console.log('hiic');
-        popup.style.display="none"
+      popup.style.display="none"
+      const hero = document.querySelector('.hero');
+      const store = document.querySelector('.store');
+      const footer = document.querySelector('.footer');
+      const lowerfooter = document.querySelector('.lower-footer');
+      hero.style.display="block";
+      store.style.display="block";
+      footer.style.display="block";
+      lowerfooter.style.display="block";
     }
     
-    function showPopup() {
-        console.log('hiis');
-        popup.style.display="flex";
+    function showPopup() {  
+      popup.style.display="flex";
+      const hero = document.querySelector('.hero');
+      const store = document.querySelector('.store');
+      const footer = document.querySelector('.footer');
+      const lowerfooter = document.querySelector('.lower-footer');
+      hero.style.display="none";
+      store.style.display="none";
+      footer.style.display="none";
+      lowerfooter.style.display="none";
+      // window.onscroll = function () { window.scrollTo(0, 0); };
+      
     }
   </script>
 </html>
