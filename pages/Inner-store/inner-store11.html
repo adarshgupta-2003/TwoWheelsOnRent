@@ -7,6 +7,97 @@
   </head>
   <link rel="stylesheet" href="/assets/css/inner-store_style.css" />
   <body>
+    <!-- popup -->
+      
+<div class="popup">
+
+  <div class="pbox">
+    <ul>
+      <!-- <img src="./assets/img/close.png" onclick="closePopup()" /> -->
+      <img src="/assets/img/pcross1.png" onclick="closePopup()" />
+      <li><a href="/pages/login.html">Login</a></li>
+      <li><a href="/pages/register.html">Register</a></li>
+      <li><a href="#">Sign out</a></li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- navbar -->
+<div class="navbar">
+  <div class="upper-navbar">
+
+    <img
+      src="/assets/img/user.png"
+      style="height: 45px; margin: 20px; cursor: pointer;" 
+      onclick="showPopup()"
+    />
+
+    <img src="/assets/img/logo.jpg" />
+
+    <img
+      src="/assets/img/globe.jpg"
+      style="height: 55px; margin: 20px"
+    />
+
+  </div>
+
+  <div class="mobile-sidebar">
+    <img src="/assets/img/close.png" onclick="closeSideBar()" alt="" />
+    <div class="mobile">
+      <ul>
+        <li class="mobile"><a href="#" onclick="closeSideBar()">Home</a></li>
+        <li class="mobile"><a href="#store" onclick="closeSideBar()">Store</a></li>
+        <li class="mobile">
+          <a href="./pages/about.html" onclick="closeSideBar()">About</a>
+        </li>
+        <li class="mobile">
+          <a href="./pages/contact.html" onclick="closeSideBar()">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="lower-navbar">
+    <div class="nlogo1 desktop">
+      <img src="/assets/img/menu.png" onclick="showSideBar()" alt="" />
+    </div>
+
+    <ul class="desktop-inner">
+      <img src="/assets/img/logo.jpg" alt="" />
+      <li class="desktop-inner"><a href="#">Home</a></li>
+      <li class="desktop-inner"><a href="#store">Store</a></li>
+      <li class="desktop-inner">
+        <a href="./pages/about.html">About</a>
+      </li>
+      <li class="desktop-inner">
+        <a href="./pages/contact.html">Contact</a>
+      </li>
+    </ul>
+
+    <div class="nlogo2 desktop">
+      <img src="/assets/img/user.png" onclick="showPopup()" />
+    </div>
+
+  </div>
+
+  <div class="inner-store-navbar-mob">
+
+    <div class="menu">
+      <img src="/assets/img/menu.png" onclick="showSideBar()" alt="">
+    </div>
+
+    <div class="logo">
+      <img src="/assets/img/logo.jpg" alt="">
+    </div>
+
+    <div class="user">
+      <img src="/assets/img/user.png" onclick="showPopup()" alt="">
+    </div>
+
+  </div>
+</div>
+
     <div class="container">
       <div class="main-box">
         <div class="img">
@@ -52,6 +143,7 @@
       </div>
     </div>
   </body>
+  <script src="innerscript.js"></script>
 </html>
 
 <!-- 

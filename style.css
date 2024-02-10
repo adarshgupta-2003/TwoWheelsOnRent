@@ -7,11 +7,6 @@
     --link-underline-padding: .5em;
 }
 
-.stop-scroll{
-    overflow: hidden;
-}
-
-
 /* upper navbar */
 .navbar{
     position: fixed;
