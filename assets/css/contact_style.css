@@ -8,7 +8,8 @@
     height: 100vh;
     display: grid;
     align-items: center;
-    background: rgb(37, 33, 33);
+    background: url(/assets/img/login-page.jpg);
+    background-size: cover;
     font-family: "Poppins", sans-serif;
   }
   
@@ -20,7 +21,7 @@
     flex-wrap: wrap;
     padding: 10px;
     border-radius: 10px;
-    background: #fff;
+    /* background-color: #3B3B3B; */
     box-shadow: 0px 0px 10px 0px #666;
   }
   
@@ -42,6 +43,7 @@
   }
   .contact-form h1 {
     margin-bottom: 10px;
+    color: white;
   }
   
   .contact-form-txt {

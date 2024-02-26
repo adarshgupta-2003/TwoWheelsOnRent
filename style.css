@@ -1,11 +1,22 @@
+@font-face{
+    font-family: oneplusans;
+    src:url(./assets/oneplusans.ttf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
+    /* font-family: oneplusans; */
+    font-family: 'Roboto', sans-serif;
     --link-underline-padding: .5em;
 }
+
+
 
 /* upper navbar */
 .navbar{
@@ -66,6 +77,31 @@ transition: background-size 0.5s;
 .lower-navbar ul li a:hover{
     --underline-width: 100%;
 }
+
+/* complicated animation underline */
+
+/* .lower-navbar ul li a{
+font-size: 25px;
+text-decoration: none;
+display: inline-block;
+color: var(--link-color);
+padding: 0 var(--link-underline-padding);
+}
+
+.lower-navbar ul li a:after{
+    background-color:  black;
+    content: '';
+    display: block;
+    height: .1em;
+    margin-left: calc(var(--link-underline-padding) * -1);
+    margin-top: .2em;
+    transition: width .5s;
+    width: 0;
+}
+
+.lower-navbar ul li a:hover:after{
+    width: calc(100% + var(--link-underline-padding) * 2);
+} */
 
 .lower-navbar img{
     height: 40px;
@@ -174,6 +210,10 @@ transition: background-size 0.5s;
 
 /* store */
 
+#store{
+    scroll-margin: 160px;
+}
+
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -248,16 +288,21 @@ transition: background-size 0.5s;
     display: none;
     z-index: 999;
     /* background-color: #fafafa; */
-    background-color: transparent;
+    background: url(/assets/img/user-page.jpg);
+    background-size: cover;
 }
 
 .pbox{
-    background-color: white;
+    /* background-color: white; */
+    /* background-color: transparent; */
+    /* background-color: rgba(25, 25, 25, 0.7); */
+    background-color: rgba(100, 100, 100, .43);;
     height: 400px;
     width: 400px;
     position: relative;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
+    box-shadow: -2px 43px 43px 26px rgba(0,0,0,0.77);
 }
 
 .pbox ul{

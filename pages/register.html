@@ -6,6 +6,14 @@
   <title>Registration Form</title>
   <style>
     /* Set a centered layout */
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+
     body {
       text-align: center;
     }
@@ -14,19 +22,25 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
+      justify-content: center;  
     }
 
-    /* Set a good color scheme */
     form {
-      background-color: #f7f7f7;
-      border: 1px solid #ddd;
-      padding: 20px;
+      background: url(/assets/img/reg.jpg);
+       background-size: contain;
+      /* padding: 20px; */
       height: 100vh;
+      width: 100vw;
+      height: 100vh;
+      
+    }
+
+    form h1{
+      color: white;
     }
 
     /* Make the input fields broad */
-    input {      
+    input {
       width: 35%;
       padding: 10px;
       margin: 6px 0;
@@ -45,6 +59,18 @@
       cursor: pointer;
     }
 
+    .box1{
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;  
+    }
+
+    .box1 h1{
+      margin-bottom: 30px;
+    }
+
     @media (max-width: 600px) {
       input {
         width: 90%;
@@ -57,17 +83,15 @@
 <div class="box1">
     <h1>Registration Form</h1>
 
-    <input type="text" name="name" placeholder="Name" required>
-    <input type="text" name="username" placeholder="Username" required>
+    <input type="text" name="name" placeholder="Name" required>>
     <input type="password" name="password" placeholder="Password" required>
     <input type="password" name="confirm_password" placeholder="Confirm Password" required>
     <input type="text" name="address" placeholder="Address" required>
     <input type="text" name="pincode" placeholder="Pincode" required>
-    <input type="email" name="email" placeholder="Email" required>
+    <input type="number" name="aadhar" placeholder="Aadhar Card" required>
     <input type="tel" name="phone_number" placeholder="Phone Number" required>
-    <input type="text" name="country" placeholder="Country" required>
-</div>
     <button type="submit">Register</button>
+</div>
 </form>
 </body>
 </html>

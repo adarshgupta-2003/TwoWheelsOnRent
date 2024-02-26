@@ -2,7 +2,9 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    background-color: blanchedalmond;
+    /* background-color: blanchedalmond; */
+    /* background-color: black; */
+    /* color: white; */
 }
 
 .container {
@@ -281,22 +283,24 @@ input[type="submit"]{
     align-items: center;
     height: 100vh;
     display: none;
-    z-index: 999;
-    /* background-color: #fafafa; */
-    background-color: transparent;
+    z-index: 999;   
+    background: url(/assets/img/user-page.jpg);
+    background-size: cover;
 }
 
 .pbox{
-    background-color: white;
+    
+    
     height: 400px;
     width: 400px;
     position: relative;
     border-radius: 12px;
-    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 
 .pbox ul{
     height: 100%;
+    background-color: transparent;
     width: auto;
     list-style-type: none;
     flex-direction: column;
@@ -304,6 +308,7 @@ input[type="submit"]{
     justify-content: center;
     align-items: center;
     border: 2px solid transparent;
+    border-radius: 12px;
 }
 
 
