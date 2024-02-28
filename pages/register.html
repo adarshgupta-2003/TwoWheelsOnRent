@@ -1,41 +1,37 @@
 <!DOCTYPE html>
 <html>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
   <style>
     /* Set a centered layout */
-
-    *{
+    * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
 
-
     body {
       text-align: center;
     }
 
-    .box1{
+    .box1 {
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;  
+      justify-content: center;
     }
 
     form {
       background: url(/assets/img/reg.jpg);
-       background-size: contain;
-      /* padding: 20px; */
+      background-size: contain;
       height: 100vh;
       width: 100vw;
       height: 100vh;
-      
     }
 
-    form h1{
+    form h1 {
       color: white;
     }
 
@@ -59,39 +55,130 @@
       cursor: pointer;
     }
 
-    .box1{
+    .box1 {
       width: 100vw;
       height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;  
+      align-items: center;
     }
 
-    .box1 h1{
+    .box1 h1 {
       margin-bottom: 30px;
+      color: #04AA6D;
+    }
+
+    .lower{
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 37%;
+    }
+
+    .lower p{
+      color: white;
+    }
+
+    .lower a{
+      color: #04AA6D;
     }
 
     @media (max-width: 600px) {
       input {
         width: 90%;
       }
+
+      .lower{
+        width: auto;
+      }
+
+      .lower p{
+        margin-left: 10px;
+      }
+
     }
   </style>
 </head>
 <body>
-  <form action="/register" method="POST">
-<div class="box1">
-    <h1>Registration Form</h1>
+  <form id="registerForm" action="/register" method="POST">
+    <div class="box1">
+      <h1>Registration Form</h1>
 
-    <input type="text" name="name" placeholder="Name" required>>
-    <input type="password" name="password" placeholder="Password" required>
-    <input type="password" name="confirm_password" placeholder="Confirm Password" required>
-    <input type="text" name="address" placeholder="Address" required>
-    <input type="text" name="pincode" placeholder="Pincode" required>
-    <input type="number" name="aadhar" placeholder="Aadhar Card" required>
-    <input type="tel" name="phone_number" placeholder="Phone Number" required>
-    <button type="submit">Register</button>
-</div>
-</form>
+      <input type="text" name="name" id="name" placeholder="Name" required>
+      <input type="password" name="password" id="password" placeholder="Password" required>
+      <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+      <input type="text" name="address" id="address" placeholder="Address" required>
+      <input type="email" name="email" id="email" placeholder="Email" required>
+      <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
+      <input type="number" name="aadhar" id="aadhar" placeholder="Aadhar Card" required>
+      <input type="tel" name="phone_number" id="phone_number" placeholder="Phone Number" required>
+      <div class="lower">
+        <button type="submit">Register</button>
+        <p>Already a member? <a href="./login.html">Login</a></p>
+      </div>
+    </div>
+  </form>
+  <script>
+    const registerForm = document.getElementById('registerForm');
+    const aadhar = document.getElementById('aadhar');
+
+    // multiplication table
+    const d = [
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 2, 3, 4, 0, 6, 7, 8, 9, 5],
+        [2, 3, 4, 0, 1, 7, 8, 9, 5, 6],
+        [3, 4, 0, 1, 2, 8, 9, 5, 6, 7],
+        [4, 0, 1, 2, 3, 9, 5, 6, 7, 8],
+        [5, 9, 8, 7, 6, 0, 4, 3, 2, 1],
+        [6, 5, 9, 8, 7, 1, 0, 4, 3, 2],
+        [7, 6, 5, 9, 8, 2, 1, 0, 4, 3],
+        [8, 7, 6, 5, 9, 3, 2, 1, 0, 4],
+        [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
+    ]
+
+    // permutation table
+    const p = [
+        [0, 1, 2, 3, 4, 5, 6, 7, 8, 9],
+        [1, 5, 7, 6, 2, 8, 3, 0, 9, 4],
+        [5, 8, 0, 3, 7, 9, 6, 1, 4, 2],
+        [8, 9, 1, 6, 0, 4, 3, 5, 2, 7],
+        [9, 4, 5, 3, 1, 2, 6, 8, 7, 0],
+        [4, 2, 8, 6, 5, 7, 3, 9, 0, 1],
+        [2, 7, 9, 3, 8, 0, 6, 4, 1, 5],
+        [7, 0, 4, 6, 9, 1, 3, 2, 5, 8]
+    ]
+
+    // validates Aadhar number received as string
+    function validate(aadharNumber) {
+        let c = 0
+        let invertedArray = aadharNumber.split('').map(Number).reverse()
+
+        invertedArray.forEach((val, i) => {
+            c = d[c][p[(i % 8)][val]]
+        })
+
+        return (c === 0)
+    }
+
+    registerForm.addEventListener('submit', (event) => {
+        if (aadhar.value.length !== 12) {
+            event.preventDefault();
+            alert('Aadhar number should be 12 digits');
+            return;
+        }
+
+        if (!validate(aadhar.value)) {
+            event.preventDefault();
+            alert('Your aadhar card no. is not valid');
+            return;
+        }
+
+        if (phone_number.value.length !== 10) {
+            event.preventDefault();
+            alert('Phone number should be 10 digits');
+            return;
+        }
+    });
+  </script>
 </body>
 </html>
