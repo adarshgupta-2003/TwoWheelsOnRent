@@ -379,22 +379,30 @@
       popup.style.display="none"
       const hero = document.querySelector('.hero');
       const store = document.querySelector('.store');
+      const about = document.querySelector('.about-section');
+      const contact = document.querySelector('.contact');
       const footer = document.querySelector('.footer');
       const lowerfooter = document.querySelector('.lower-footer');
       hero.style.display="block";
       store.style.display="block";
+      about.style.display="block";
+      contact.style.display="block";
       footer.style.display="flex";
-      lowerfooter.style.display="flex";
+      lowerfooter.style.display="block";
     }
     
     function showPopup() {  
       popup.style.display="flex";
       const hero = document.querySelector('.hero');
       const store = document.querySelector('.store');
+      const about = document.querySelector('.about-section');
+      const contact = document.querySelector('.contact');
       const footer = document.querySelector('.footer');
       const lowerfooter = document.querySelector('.lower-footer');
       hero.style.display="none";
       store.style.display="none";
+      about.style.display="none";
+      contact.style.display="none";
       footer.style.display="none";
       lowerfooter.style.display="none";
       // window.onscroll = function () { window.scrollTo(0, 0); };
