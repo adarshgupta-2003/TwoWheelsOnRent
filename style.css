@@ -20,6 +20,11 @@
     background-color: rgb(12, 12, 12);
 }
 
+.alert_style{
+    margin-bottom: 15px;
+    color: rgb(55, 201, 55);
+}
+
 
 /* upper navbar */
 .navbar{
