@@ -4,9 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cycle Rent App</title>
-    <script src="script.js"></script>
+    <script src="./script.js"></script>
   </head>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <body>
           <!-- popup -->
       
@@ -15,9 +16,10 @@
               <ul>
                 <!-- <img src="./assets/img/close.png" onclick="closePopup()" /> -->
                 <img src="./assets/img/pcross1.png" onclick="closePopup()" />
-                <li><a href="./pages/login.html">Login</a></li>
-                <li><a href="./pages/register.html">Register</a></li>
-                <li><a href="#">Sign out</a></li>
+                <li class="loggedIn1"><a href="/login.html"">Login</a></li>
+                <li class="loggedIn2"><a href="/signup.html">Register</a></li>
+                <li><a id="greet"></a></li>
+                <li><a href="#" onclick="signOut()">Sign out</a></li>
               </ul>
             </div>
         </div>
@@ -293,19 +295,27 @@
 
         <div class="mid-section">
           <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="./pages/about.html">About</a></li>
-            <li><a href="#store">Store</a></li>
-            <li><a href="./pages/contact.html">Contact</a></li>
+            <li><a href="/login.html">Login</a></li>
+            <li><a href="/signup.html">Register</a></li>
+            <li><a href="./pages/privacy.html">Privacy</a></li>
+            <li><a href="./pages/privacy.html">Terms</a></li>
           </ul>
         </div>
 
         <div class="end-section">
           <ul>
-            <li><a href="./pages/login.html">Login</a></li>
-            <li><a href="./pages/register.html">Register</a></li>
-            <li><a href="./pages/privacy.html">Privacy</a></li>
-            <li><a href="./pages/privacy.html">Terms</a></li>
+            <a href="https://www.linkedin.com/in/adarsh-gupta-652a67224/" target="_blank" class="footer_social">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a href="https://twitter.com/AdarshG52146094" target="_blank" class="footer_social">
+              <i class="uil uil-twitter-alt"></i>
+            </a>
+            <a href="https://www.instagram.com/adarsh.guptaaaa/" target="_blank" class="footer_social">
+              <i class="uil uil-instagram"></i>
+            </a>
+            <a href="https://www.instagram.com/adarsh.guptaaaa/" target="_blank" class="footer_social">
+              <i class="uil uil-medium-m"></i>
+            </a>
         </ul>
         </div>
 
@@ -313,7 +323,7 @@
 
       <div class="lower-footer">
         <h4>Copyright © 2024 <a href="#home">TwoWheelsOnRent</a></h4>
-        <h4>Developed with ❤️ by <a target=”_blank” href="https://adarshgupta.pages.dev/">Adarsh Gupta</a> & <a href="">Aniket Vishwakarma</a></h4>
+        <h4>Developed by <a target=”_blank” href="https://adarsh-gupta.pages.dev/">Adarsh Gupta</a> & <a href="">Aniket Vishwakarma</a></h4>
       </div>
     </div>
 
@@ -346,5 +356,22 @@
       // window.onscroll = function () { window.scrollTo(0, 0); };
       
     }
+
+    if(userInfo){
+    var popup1 = document.querySelector('.loggedIn1');
+    var popup2 = document.querySelector('.loggedIn2');
+    popup1.style.display = 'none';
+    popup2.style.display = 'none';
+    const greet = document.getElementById("greet");
+    // const userName = localStorage.getItem("userName");
+    const userName = sessionStorage.getItem("user-name");
+    greet.innerText = `Welcome ${userName}`;
+    console.log(`Name of user is ${userName}`);
+    console.log("displayed prev element none");
+}
+
+    
   </script>
+
+  
 </html>

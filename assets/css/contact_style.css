@@ -21,7 +21,7 @@
     flex-wrap: wrap;
     padding: 10px;
     border-radius: 10px;
-    /* background-color: #3B3B3B; */
+    background-color: #3B3B3B;
     box-shadow: 0px 0px 10px 0px #666;
   }
   
@@ -58,6 +58,8 @@
   }
   .contact-form-txt::placeholder {
     color: #695555;
+    font-size: 17px;
+    font-weight: 900;
   }
   
   .contact-form-textarea {
@@ -73,6 +75,8 @@
   }
   .contact-form-textarea::placeholder {
     color: #3d3030;
+    font-weight: 600;
+    /* font-size: 17px; */
   }
   
   .contact-form-btn {

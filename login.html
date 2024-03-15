@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <style>
+    /* Set a centered layout */
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    body {
+      text-align: center;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url(/assets/img/login-page1.jpg);
+      backdrop-filter: blur(5px);
+      font-family: 'Roboto', sans-serif;
+      background-size: cover;
+    }
+
+    form {
+      border: 1px solid black;
+      width: 25vw;
+      border-radius: 10px;
+      padding: 20px;
+      /* max-width: fit-content ; */
+    }
+
+    /* Make the input fields broad */
+    input {
+      width: 80%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid grey;
+      border-radius: 7px;
+    }
+
+    /* Add a submit button */
+    button {
+      background-color: #04AA6D;
+      color: white;
+      padding: 10px 30px;
+      margin: 20px 0;
+      border: none;
+      border-radius: 7px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 600px) {
+      input {
+        width: 80%;
+      }
+
+      form{
+        border: 1px solid #ddd;
+      }
+
+      form h1{
+        color: white;
+      }
+    }
+
+    form p{
+      color: white;
+    }
+
+    form p a{
+      color: #04AA6D;
+      font-weight: 900;
+    }
+
+    .cont1 h1{
+      margin-bottom: 10px;
+    }
+
+    .cont2{
+      /* display: flex; */
+      justify-content: center;
+      align-items: center;
+    }
+
+.cont2 button{
+  margin-right: 8px;
+  /* width: 100%; */
+}
+
+  </style>
+</head>
+<body>
+  <form id="MainForm">
+    <div class="cont1">
+      <h1>Login Form</h1>
+        <input type="text" name="username" id="username" placeholder="Enter your name :" required>
+        <input type="email" name="userEmail" id="userEmail" placeholder="Enter your email :" required>
+        <input type="password" name="password" id="password" placeholder="Enter your password :" required>
+    </div>
+
+    <div class="cont2">
+      <button type="submit">Login</button>
+      <p>Don't have an account? <a href="/signup.html">Register</a></p>
+    </div>
+  </form>
+  <script type="module">
+    (() => {
+      const firebaseConfig = {
+    apiKey: "AIzaSyA7BqOZiuTBeW8QmzjZ_wPDbzJUPWbN8d0",
+    authDomain: "registeration-db.firebaseapp.com",
+    databaseURL: "https://registeration-db-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "registeration-db",
+    storageBucket: "registeration-db.appspot.com",
+    messagingSenderId: "753934937383",
+    appId: "1:753934937383:web:9dd5a245b826870ac28d02",
+    measurementId: "G-PJ6LKCEW6N"
+  };
+
+
+      const initializeFirebase = () => {
+        import('https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js').then(({ initializeApp }) => {
+          import('https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js').then(({ getDatabase, ref, child, get }) => {
+            import('https://www.gstatic.com/firebasejs/10.8.1/firebase-auth.js').then(({ getAuth, signInWithEmailAndPassword }) => {
+              const app = initializeApp(firebaseConfig);
+              const db = getDatabase();
+              const auth = getAuth(app);
+              const dbref = ref(db);
+
+              const SignInUser = (evt) => {
+                evt.preventDefault();
+                const EmailInp = document.getElementById("userEmail").value;
+                const UserInp = document.getElementById("username").value;
+                const PassInp = document.getElementById("password").value;
+
+                signInWithEmailAndPassword(auth, EmailInp, PassInp)
+                  .then((credentials) => {
+                    get(child(dbref, `UsersAuthList/${credentials.user.uid}`)).then((snapshot) => {
+                      if (snapshot.exists()) {
+                        sessionStorage.setItem("user-info",EmailInp);
+                        sessionStorage.setItem("user-name",UserInp);
+                        sessionStorage.setItem("user-creds",JSON.stringify(credentials.user));
+                        window.location.href = "index.html";
+                      }
+                    });
+                  })
+                  .catch((error) => {
+                    console.error(error.code);
+                    console.error(error.message);
+                    alert(error.message);
+                  });
+              };
+
+              document
+                .getElementById("MainForm")
+                .addEventListener("submit", SignInUser);
+            });
+          });
+        });
+      };
+
+      initializeFirebase();
+    })();
+  </script>
+</body>
+</html>

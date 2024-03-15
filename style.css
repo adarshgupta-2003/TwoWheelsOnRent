@@ -1,8 +1,3 @@
-@font-face{
-    font-family: oneplusans;
-    src:url(./assets/oneplusans.ttf);
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 *{
@@ -11,7 +6,6 @@
     box-sizing: border-box;
     scroll-behavior: smooth;
     overflow-x: hidden;
-    /* font-family: oneplusans; */
     font-family: 'Roboto', sans-serif;
     --link-underline-padding: .5em;
 }
@@ -287,10 +281,12 @@ padding: 0 var(--link-underline-padding);
     height: 100vh;
     display: none;
     z-index: 999;
-    /* background-color: #fafafa; */
-    background: url(/assets/img/user-page.jpg);
+    /* background: url(/assets/img/user-img.jpg); */
+    background: url(/assets/img/user-img.jpg);
     background-size: cover;
-}
+    /* backdrop-filter: blur(5px); */
+    /* filter: blur(6px); */
+  }
 
 .pbox{
     /* background-color: white; */
@@ -300,9 +296,11 @@ padding: 0 var(--link-underline-padding);
     height: 400px;
     width: 400px;
     position: relative;
+    
     border-radius: 12px;
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
-    box-shadow: -2px 43px 43px 26px rgba(0,0,0,0.77);
+    box-shadow: -2px 5px 43px 26px rgba(0,0,0,0.77);
+    /* box-shadow: -2px 43px 43px 26px rgba(0,0,0,0.77); */
 }
 
 .pbox ul{
@@ -375,6 +373,15 @@ footer{
     text-align: center;
     padding-bottom: 8px;
     font-weight: 400;
+}
+
+.end-section ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.end-section a i{
+    color: black;
 }
 
 
