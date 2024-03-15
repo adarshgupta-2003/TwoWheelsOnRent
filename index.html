@@ -18,7 +18,7 @@
                 <img src="./assets/img/pcross1.png" onclick="closePopup()" />
                 <li class="loggedIn1"><a href="/login.html"">Login</a></li>
                 <li class="loggedIn2"><a href="/signup.html">Register</a></li>
-                <li><a id="greet"></a></li>
+                <li id="specialGreet"><a id="greet"></a></li>
                 <li><a href="#" onclick="signOut()">Sign out</a></li>
               </ul>
             </div>
@@ -407,6 +407,8 @@
     popup1.style.display = 'none';
     popup2.style.display = 'none';
     const greet = document.getElementById("greet");
+    const specialGreet = document.getElementById("specialGreet");
+    specialGreet.style.display="flex";
     // const userName = localStorage.getItem("userName");
     const userName = sessionStorage.getItem("user-name");
     greet.innerText = `Welcome ${userName}`;

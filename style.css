@@ -13,6 +13,10 @@
     color: white;
 }
 
+#specialGreet{
+    display: none;
+}
+
 /* color black */
 
 .navbar, .upper-navbar, .mobile-sidebar , .lower-navbar,
@@ -344,8 +348,8 @@ padding: 0 var(--link-underline-padding);
 
 .pbox li a{
     text-decoration: none;
-    /* color: black; */
-    color: white;
+    color: black;
+    /* color: white; */
     font-size: 38px;
     font-weight: 600;
 }
@@ -375,6 +379,7 @@ footer{
     align-items: center;
     flex-direction: row;
     font-weight: 400;
+    padding-top: 30px;
 }
 
 .logo-section img{
