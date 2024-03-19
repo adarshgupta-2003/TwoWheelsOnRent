@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Form</title>
+  <link href="https://db.onlinewebfonts.com/c/b8da90c1201a2b340a6108b8ad0a52b8?family=Space+Bd+BT+Bold" rel="stylesheet">
+
   <style>
     /* Set a centered layout */
 
@@ -20,36 +22,48 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      background: url(/assets/img/login-page1.jpg);
-      backdrop-filter: blur(5px);
-      font-family: 'Roboto', sans-serif;
+      background: url(/assets/img/login-cycle.jpg);
+      backdrop-filter: blur(3px);
       background-size: cover;
     }
 
+    .cont1 h1{
+      font-family: "Space Bd BT Bold";
+    }
+
     form {
-      border: 1px solid black;
+      border: 2px solid black;
       width: 25vw;
       border-radius: 10px;
       padding: 20px;
-      /* max-width: fit-content ; */
+      /* background-color: #f6ecc4;
+      background-image: linear-gradient(315deg, #f6ecc4 0%, #f7d4d4 74%); */
+/* 
+      background-color: #e0d2b4;
+background-image: linear-gradient(315deg, #e0d2b4 0%, #e2ac6b 74%); */
+
+background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #cea177 74%);
+
     }
 
     /* Make the input fields broad */
+
     input {
-      width: 80%;
-      padding: 10px;
+      width: 85%;
+      padding: 10px 15px;
       margin: 5px 0;
-      border: 1px solid grey;
+      border: 2px solid black;
       border-radius: 7px;
+      outline: none;
+      font-size: 18px;
     }
 
     /* Add a submit button */
+
     button {
-      background-color: #04AA6D;
-      color: white;
-      padding: 10px 30px;
+      padding: 6px 30px;
       margin: 20px 0;
-      border: none;
       border-radius: 7px;
       cursor: pointer;
     }
@@ -73,22 +87,31 @@
     }
 
     form p a{
-      color: #04AA6D;
+      color :#191970;
       font-weight: 900;
+      text-decoration: none;
     }
 
     .cont1 h1{
       margin-bottom: 10px;
+      font-size: 38px;
     }
 
     .cont2{
-      /* display: flex; */
       justify-content: center;
       align-items: center;
     }
 
+    .cont2 p{
+      color: black;
+    }
+
 .cont2 button{
   margin-right: 8px;
+  color: black;
+  font-size: 20px;
+  font-weight: 500;
+  background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
   /* width: 100%; */
 }
 
@@ -98,9 +121,9 @@
   <form id="MainForm">
     <div class="cont1">
       <h1>Login Form</h1>
-        <input type="text" name="username" id="username" placeholder="Enter your name :" required>
-        <input type="email" name="userEmail" id="userEmail" placeholder="Enter your email :" required>
-        <input type="password" name="password" id="password" placeholder="Enter your password :" required>
+        <input type="text" name="username" id="username" placeholder="Enter your name" required>
+        <input type="email" name="userEmail" id="userEmail" placeholder="Your email" required>
+        <input type="password" name="password" id="password" placeholder="Your password" required>
     </div>
 
     <div class="cont2">

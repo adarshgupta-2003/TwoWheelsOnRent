@@ -6,6 +6,9 @@
     <title>TwoWheelsOnRent</title>
   </head>
   <link rel="stylesheet" href="/assets/css/inner-store_style.css" />
+  <script src="https://kit.fontawesome.com/3b54bb2e71.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/b8da90c1201a2b340a6108b8ad0a52b8?family=Space+Bd+BT+Bold" rel="stylesheet">
   <body>
     <!-- popup -->
       
@@ -13,7 +16,6 @@
 
   <div class="pbox">
     <ul>
-      <!-- <img src="./assets/img/close.png" onclick="closePopup()" /> -->
       <img src="/assets/img/pcross1.png" onclick="closePopup()" />
       <li><a href="/pages/login.html">Login</a></li>
       <li><a href="/pages/register.html">Register</a></li>
@@ -26,33 +28,26 @@
 <!-- navbar -->
 <div class="navbar">
   <div class="upper-navbar">
+    <h1 class="logo">TwoWheelsOnRent</h1>
 
-    <img
-      src="/assets/img/user.png"
-      style="height: 45px; margin: 20px; cursor: pointer;" 
-      onclick="showPopup()"
-    />
-
-    <img src="/assets/img/logo.jpg" />
-
-    <img
-      src="/assets/img/globe.jpg"
-      style="height: 55px; margin: 20px"
-    />
+      <img class="flag"
+        src="/assets//img/flag.png"
+        style="height: 60px;margin-top: 20px;margin-right: 30px;" 
+      />
 
   </div>
 
   <div class="mobile-sidebar">
-    <img src="/assets/img/close.png" onclick="closeSideBar()" alt="" />
+    <img src="./assets/img/close.png" onclick="closeSideBar()" alt="" />
     <div class="mobile">
       <ul>
         <li class="mobile"><a href="#" onclick="closeSideBar()">Home</a></li>
         <li class="mobile"><a href="#store" onclick="closeSideBar()">Store</a></li>
         <li class="mobile">
-          <a href="./pages/about.html" onclick="closeSideBar()">About</a>
+          <a href="#about" onclick="closeSideBar()">About</a>
         </li>
         <li class="mobile">
-          <a href="./pages/contact.html" onclick="closeSideBar()">Contact</a>
+          <a href="#contact" onclick="closeSideBar()">Contact</a>
         </li>
       </ul>
     </div>
@@ -60,39 +55,23 @@
 
   <div class="lower-navbar">
     <div class="nlogo1 desktop">
-      <img src="/assets/img/menu.png" onclick="showSideBar()" alt="" />
+      <img src="./assets/img/menu.png" onclick="showSideBar()" alt="" />
     </div>
 
     <ul class="desktop-inner">
-      <img src="/assets/img/logo.jpg" alt="" />
-      <li class="desktop-inner"><a href="#">Home</a></li>
-      <li class="desktop-inner"><a href="#store">Store</a></li>
+      <img src="./assets/img/logo.jpg" alt="" />
+      <li class="desktop-inner"><a href="/index.html">Home</a></li>
+      <li class="desktop-inner"><a href="/index.html/#store">Store</a></li>
       <li class="desktop-inner">
-        <a href="./pages/about.html">About</a>
+        <a href="/index.html/#about">About</a>
       </li>
       <li class="desktop-inner">
-        <a href="./pages/contact.html">Contact</a>
+        <a href="/index.html/#contact">Contact</a>
       </li>
     </ul>
 
     <div class="nlogo2 desktop">
-      <img src="/assets/img/user.png" onclick="showPopup()" />
-    </div>
-
-  </div>
-
-  <div class="inner-store-navbar-mob">
-
-    <div class="menu">
-      <img src="/assets/img/menu.png" onclick="showSideBar()" alt="">
-    </div>
-
-    <div class="logo">
-      <img src="/assets/img/logo.jpg" alt="">
-    </div>
-
-    <div class="user">
-      <img src="/assets/img/user.png" onclick="showPopup()" alt="">
+      <!-- <img src="./assets/img/user.png" onclick="showPopup()" /> -->
     </div>
 
   </div>
@@ -113,40 +92,35 @@
           <div class="price">
             <h1>₹ 80 per hour</h1>
           </div>
-
           <div class="u-form">
-            <form action="">
-
+            <form id="storeForm">
               <div class="u-ini">
-
                 <div class="date">
-                  <h2>On what date ?</h2>
                   <input type="datetime-local" id="datetime" />
                 </div>
-
                 <div class="hours">
-                  <h2>How many hours ?</h2>
-                  <input type="number" id="hours" />
+                  <input type="number" id="hours" placeholder="How many hours" />
                 </div>
 
               </div>
+
               <div class="lower">
                 <div class="email">
-                  <h2>Enter your email :</h2>
-                  <input type="email" id="email" />
+                  <input type="email" id="email" placeholder="Enter your email" />
                 </div>
                 <div class="aadhar">
-                  <h2>Enter your aadhar :</h2>
-                  <input type="number" id="aadhar" />
+                  <input type="number" id="aadhar" placeholder="Enter your aadhar" />
                 </div>              
               </div>
+              
               <div class="pay">
-              <input type="submit" value="Pay Now">
-            </div>
+                <input type="submit" value="Pay Now">
+              </div>
+              
             
             </form>
           </div>
-
+          
 
         </div>
       </div>

@@ -4,126 +4,143 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Registration Form</title>
+  <script src="https://kit.fontawesome.com/3b54bb2e71.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/b8da90c1201a2b340a6108b8ad0a52b8?family=Space+Bd+BT+Bold" rel="stylesheet">
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
     * {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
+      /* box-sizing: border-box; */
+      
     }
 
     body {
+      width: 100%;
+      height: 84vh;
       text-align: center;
       font-family: 'Roboto', sans-serif;
+      /* background-color: #d9d9d9;
+      background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%); */
+      background-color: #e2c9be;
+background-image: linear-gradient(315deg, #e2c9be 0%, #fbf7e9 74%);
+background-size: cover;
+
     }
 
-    .box1 {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    form {
-      background: url("/assets/img/reg-form.jpg");
-      background-size: cover;
-      height: 100vh;
-      width: 100vw;
-      height: 100vh;
-    }
-
-    form h1 {
-      color: white;
-    }
 
     /* Make the input fields broad */
     input {
       width: 35%;
       padding: 10px;
       margin: 6px 0;
-      border: 1px solid grey;
+      border: 2px solid #2d3436;
       border-radius: 8px;
-      color: black;
+      color: #2d3436;
       font-weight: 900;
       font-size: 17px;
     }
 
     /* Add a submit button */
     button {
-      background-color: #04AA6D;
+      background-image: linear-gradient(315deg, #8ae9b3 0%, #c8d6e5 74%);
       color: black;
       padding: 10px 30px;
       margin: 8px 0;
       border: none;
+      border: 2px solid black;
       border-radius: 8px;
       cursor: pointer;
-      font-weight: 900;
+      font-weight: 700;
       font-size: 18px;
     }
 
-    .box1 {
-      width: 100vw;
-      height: 100vh;
+    .reg-container{
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin-top: 7%;
     }
 
-    .box1 h1 {
-      margin-bottom: 30px;
-      color: white;
+    .col-1{
+      flex-basis: 35%;
     }
 
-    .lower{
-      display: flex;
-      justify-content: space-evenly;
-      align-items: center;
-      width: 37%;
+    .col-1 img{
+      height: 100%;
+      width: 100%;
+      margin-left: 15%;
+    }
+
+    .col-2{
+      flex-basis: 60%;
+    }
+
+    .lower p a{
+      text-decoration: none;
     }
 
     .lower p{
-      color: white;
+      font-weight: 600;
+      font-size: 17px;
     }
 
-    .lower a{
-      color: #04AA6D;
+    .box1 h1{
+      font-size: 40px;
+      font-family: "Space Bd BT Bold";
+      margin-bottom: 20px;
     }
 
-    @media (max-width: 600px) {
-      input {
-        width: 90%;
-      }
-
-      .lower{
-        width: auto;
-      }
-
-      .lower p{
-        margin-left: 10px;
-      }
+    .lower{
+      margin-left: 20px;
     }
+
+    .reg-left{
+      margin-right: 10px;
+    }
+
+    .box1 p a{
+      color: #191970;
+    }
+
+
+    
   </style>
 </head>
 <body>
-  <form id="MainForm">
-    <div class="box1">
-      <h1>Registration Form</h1>
+  
 
-      <input type="text" name="name" id="name" placeholder="Name" required>
-      <input type="password" name="password" id="password" placeholder="Password" required>
-      <input type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
-      <input type="text" name="address" id="address" placeholder="Address" required>
-      <input type="email" name="email" id="email" placeholder="Email" required>
-      <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
-      <input type="number" name="aadhar" id="aadhar" placeholder="Aadhar Card" required>
-      <input type="tel" name="phone" id="phone_number" placeholder="Phone Number" required>
-      <div class="lower">
-        <button type="submit"">Register</button>
-        <button type="button" onclick="clearForm()"> Clear Form</button>
-        <p>Already a member? <a href="/login.html">Login</a></p>
+<div class="reg-container">
+
+  <div class="col-1">
+    <img src="./assets/img/reg-image.png" alt="">
+  </div>
+
+  <div class="col-2">
+    <form id="MainForm">
+      <div class="box1">
+        <h1>Registration Form</h1>
+  
+        <input class="reg-left" type="text" name="name" id="name" placeholder="Name" required>
+        <input type="password" name="password" id="password" placeholder="Password" required>
+        <input class="reg-left" type="password" name="confirm_password" id="confirm_password" placeholder="Confirm Password" required>
+        <input type="text" name="address" id="address" placeholder="Address" required>
+        <input class="reg-left" type="email" name="email" id="email" placeholder="Email" required>
+        <input type="text" name="pincode" id="pincode" placeholder="Pincode" required>
+        <input class="reg-left" type="number" name="aadhar" id="aadhar" placeholder="Aadhar Card" required>
+        <input type="tel" name="phone" id="phone_number" placeholder="Phone Number" required>
+        <div class="lower">
+          <button class="" type="submit"">Register</button>
+          <button type="button" onclick="clearForm()"> Clear Form</button>
+          <p>Already a member? <a href="/login.html">Login</a></p>
+        </div>
       </div>
-    </div>
-  </form>
+    </form>
+  </div>
+</div>
+
   <script src="signup.js"></script>
 
   <script type="module">

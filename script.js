@@ -23,10 +23,12 @@ const userName = localStorage.getItem("username");
 function postSignedOut(){
     var popup1 = document.querySelector('.loggedIn1');
     var popup2 = document.querySelector('.loggedIn2');
-    const greet = document.getElementById("greet");
-    greet.style.display = 'none';
+    const specialGreet = document.getElementById("specialGreet");
+    const logout = document.getElementById("logout");
+    logout.style.display="none";
     popup1.style.display = 'flex';
     popup2.style.display = 'flex';
+    specialGreet.style.display = 'none';
 }
 
 function signOut() {

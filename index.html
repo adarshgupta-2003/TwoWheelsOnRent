@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cycle Rent App</title>
     <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/3b54bb2e71.js" crossorigin="anonymous"></script>
+    <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet'>
+    <link href="https://db.onlinewebfonts.com/c/b8da90c1201a2b340a6108b8ad0a52b8?family=Space+Bd+BT+Bold" rel="stylesheet">
+
+  
   </head>
   <link rel="stylesheet" href="./style.css" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
@@ -13,13 +18,13 @@
       
           <div class="popup">
             <div class="pbox">
-              <ul style="background-color: transparent !important";>
-                <!-- <img src="./assets/img/close.png" onclick="closePopup()" /> -->
+              <ul>
+
                 <img src="./assets/img/pcross1.png" onclick="closePopup()" />
-                <li class="loggedIn1"><a href="/login.html"">Login</a></li>
                 <li class="loggedIn2"><a href="/signup.html">Register</a></li>
+                <li class="loggedIn1"><a href="/login.html"">Login</a></li>
                 <li id="specialGreet"><a id="greet"></a></li>
-                <li><a href="#" onclick="signOut()">Sign out</a></li>
+                <li id="logout"><a href="#" onclick="signOut()">Logout</a></li>
               </ul>
             </div>
         </div>
@@ -29,18 +34,15 @@
       <div class="navbar">
         <div class="upper-navbar">
 
-          <img
-            src="./assets/img/user.png"
-            style="height: 45px; margin: 20px; cursor: pointer;" 
-            onclick="showPopup()"
-          />
+          <i class="fa-solid fa-circle-user" onclick="showPopup()"></i>
 
-          <img src="./assets/img/logo.jpg" />
+          <!-- <img src="./assets/img/logo.jpg" /> -->
+          <h1 class="logo">TwoWheelsOnRent</h1>
 
-          <img
-            src="./assets/img/globe.jpg"
-            style="height: 55px; margin: 20px"
-          />
+            <img class="flag"
+              src="./assets/img/flag.png"
+              style="height: 60px;margin-top: 20px;margin-right: 30px;" 
+            />
 
         </div>
 
@@ -95,24 +97,24 @@
 
           </div>
           <div class="left-img">
-            <img src="./assets/img/cycle.jpg" alt="" />
+            <img src="./assets/img/bicycle-header.png" alt="" />
           </div>
+
+          <!-- -------------------------mobile view cycle--------------------------- -->
+
 
           <div class="cycle1">
             <img src="./assets/img/cycle1.jpg" alt="" />
           </div>
 
+
           <div class="description">
             <div class="htitle">
-              <h1>TwoWheelsOnRent</h1>
+              <h1>Welcome to TwoWheelsOnRent!</h1>
             </div>
             <div class="hdesc">
-              <h2 class="l1">Urge for cycling ?</h2>
-              <h2 class="l2">Got no cycles ?</h2>
-              <h2 class="l3">Dont worry </h2>
-              <h2 class="l3">We got you ... </h2>
-              <h2 class="l4">Get cycles on Rent</h2>
-              <h2 class="l5">We provide variety of cycles</h2>
+              <h2 class="l1">Get cycles on Rent</h2>
+              <h2 class="l2">We provide rental services <br>for bicycles all over Mulund</h2>
             </div>
           </div>
         </div>
@@ -134,7 +136,7 @@
               <h3>MTB Pedal Ranger 3</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 100 / hour</p>
             </div>
           </a>
           </div>
@@ -148,7 +150,7 @@
               <h3>Trail Master Pro X</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 100 / hour</p>
             </div></a>
           </div>
 
@@ -161,7 +163,7 @@
               <h3>Carbon Super Peak 3000</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 100 / hour</p>
             </div></a>
           </div>
 
@@ -174,7 +176,7 @@
               <h3>Ridge Runner Elite</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 100 / hour</p>
             </div></a>
           </div>
 
@@ -187,7 +189,7 @@
               <h3>Trail Blaze Femme</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 70 / hour</p>
             </div></a>
           </div>
 
@@ -200,7 +202,7 @@
               <h3>SheRider Summit Pro</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 70 / hour</p>
             </div></a>
           </div>
 
@@ -213,7 +215,7 @@
               <h3>LadyVenture All-Terrain</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 70 / hour</p>
             </div></a>
           </div>
 
@@ -226,7 +228,7 @@
               <h3>BellaTrail XC Explorer</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 70 / hour</p>
             </div></a>
           </div>
 
@@ -239,7 +241,7 @@
               <h3>Fire Trailblazer Junior MTB</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 50 / hour</p>
             </div></a>
           </div>
 
@@ -252,7 +254,7 @@
               <h3>Rugged Rider Mountain Bike</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 50 / hour</p>
             </div></a>
           </div>
 
@@ -265,7 +267,7 @@
               <h3>Trailblazer Princess MTB</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 50 / hour</p>
             </div></a>
           </div>
 
@@ -278,7 +280,7 @@
               <h3>Adventure Sparkle Trail</h3>
             </div>
             <div class="price">
-              <p>From ₹ 80 / hour</p>
+              <p>From ₹ 50 / hour</p>
             </div>
           </a>
           </div>
@@ -297,15 +299,15 @@
           </div>
           <div class="about-right">
             <div class="about-description">
-              <h1>About :</h1>
+              <h1>About </h1>
               <p>
               <p>Welcome to our Two-Wheeler Rent App,</p>
               <p>
               Where the thrill of the open road is just a click away! Embrace the freedom to explore your city on two wheels with our seamless and user-friendly platform. Whether it's a quick commute or a weekend adventure, we connect you with quality, well-maintained bikes for an unforgettable ride. Enjoy hassle-free bookings, transparent pricing, and a diverse fleet to suit your every need.</p>
             </p>
-              <h1 class="mission">Our Mission :</h1>
+              <h1 class="mission">Our Mission </h1>
               <p>
-                Explore our mission, the core values that guide our actions, and the vision we aspire to realize. Discover how we aim to make a difference in the world and the impact we strive to create.Learn about our humble beginnings, the journey we've undertaken, and the milestones we've achieved along the way. Currently, we are proud to serve the vibrant community of Mulund. Our services extend all over Mulund, ensuring that every corner of this dynamic locality can benefit from what we offer.
+                Explore our mission, the core values that guide our actions, and the vision we aspire to realize. Learn about our humble beginnings, and the milestones we've achieved along the way. Currently, we are proud to serve the vibrant community of Mulund. Our services extend all over Mulund, ensuring that every corner of this dynamic locality can benefit from what we offer.
             </div>
 
             </p>
@@ -331,10 +333,14 @@
         </div>
       </div>
 
+      
+
       <footer class="footer">
 
         <div class="logo-section">
-          <img src="./assets/img/logo.jpg" alt="">
+          <!-- <img src="./assets/img/logo.jpg" alt=""> -->
+          <h1 class="logo" style="font-size: 30px;">TwoWheelsOnRent</h1>
+
         </div>
 
         <div class="mid-section">
@@ -422,6 +428,10 @@
     greet.innerText = `Welcome ${userName}`;
     console.log(`Name of user is ${userName}`);
     console.log("displayed prev element none");
+}
+else{
+    const logout = document.getElementById("logout");
+    logout.style.display="none";
 }
 
 // formspree
