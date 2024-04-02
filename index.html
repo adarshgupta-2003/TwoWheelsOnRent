@@ -19,7 +19,6 @@
           <div class="popup">
             <div class="pbox">
               <ul>
-
                 <img src="./assets/img/pcross1.png" onclick="closePopup()" />
                 <li class="loggedIn2"><a href="/signup.html">Register</a></li>
                 <li class="loggedIn1"><a href="/login.html"">Login</a></li>
@@ -33,17 +32,12 @@
 
       <div class="navbar">
         <div class="upper-navbar">
-
           <i class="fa-solid fa-circle-user" onclick="showPopup()"></i>
-
-          <!-- <img src="./assets/img/logo.jpg" /> -->
           <h1 class="logo">TwoWheelsOnRent</h1>
-
             <img class="flag"
               src="./assets/img/flag.png"
               style="height: 60px;margin-top: 20px;margin-right: 30px;" 
             />
-
         </div>
 
         <div class="mobile-sidebar">
@@ -66,7 +60,6 @@
           <div class="nlogo1 desktop">
             <img src="./assets/img/menu.png" onclick="showSideBar()" alt="" />
           </div>
-
           <ul class="desktop-inner">
             <img src="./assets/img/logo.jpg" alt="" />
             <li class="desktop-inner"><a href="#">Home</a></li>
@@ -78,30 +71,23 @@
               <a onclick="scrollToContact('contact')">Contact</a>
             </li>
           </ul>
-
           <div class="nlogo2 desktop">
             <img src="./assets/img/user.png" onclick="showPopup()" />
           </div>
-
         </div>
       </div>
 
 
 
       <div class="hero">
-
-
         <div class="hero-wrapper">
-
           <div class="pop-up">
-
           </div>
           <div class="left-img">
             <img src="./assets/img/bicycle-header.png" alt="" />
           </div>
 
           <!-- -------------------------mobile view cycle--------------------------- -->
-
 
           <div class="cycle1">
             <img src="./assets/img/cycle1.jpg" alt="" />
@@ -284,18 +270,11 @@
             </div>
           </a>
           </div>
-          
         </div>
-
       </div>
 
 
       <div class="about-section" id="about">
-        <div id="pabout">
-
-        </div>
-        
-
         <div class="about-container">
 
           <div class="about-left">
@@ -310,9 +289,7 @@
                 Embrace the freedom to explore your city on two wheels with our seamless and user-friendly platform. Whether it's a quick commute or a weekend adventure, we connect you with quality.
                 Our mission is to provide bicycles on rent on affordable cost so that every could afford riding. Currently, we are proud to serve the vibrant community of Mulund. Our services extend all over Mulund, ensuring that every corner of this dynamic locality can benefit from what we offer.
               </p>
-
             </div>
-
             </p>
           </div>
         </div>
@@ -331,7 +308,6 @@
               <input type="text" placeholder="Email" name="email" class="contact-form-txt" required />
               <textarea placeholder="Message" name="message" class="contact-form-textarea" required></textarea>
               <input type="submit" placeholder="Submit" class="contact-form-btn" required />
-              
             </form>
           </div>
         </div>
@@ -342,7 +318,6 @@
       <footer class="footer">
 
         <div class="logo-section">
-          <!-- <img src="./assets/img/logo.jpg" alt=""> -->
           <h1 class="logo" style="font-size: 30px;">TwoWheelsOnRent</h1>
 
         </div>
@@ -371,7 +346,7 @@
       </footer>
 
       <div class="lower-footer">
-        <h4>Copyright © 2024 <a href="#home">TwoWheelsOnRent. All rights reserved.</a></h4>
+        <h4>Copyright © 2024 TwoWheelsOnRent. All rights reserved.</h4>
         <h4>Developed by <a target=”_blank” href="https://adarsh-gupta.pages.dev/">Adarsh Gupta</a> & <a href="https://karmaniket.pages.dev/">Aniket Vishwakarma</a></h4>
       </div>
     </div>
@@ -391,7 +366,7 @@
       hero.style.display="block";
       store.style.display="block";
       about.style.display="block";
-      contact.style.display="flex";
+      contact.classList.remove("dn");
       footer.style.display="flex";
       lowerfooter.style.display="block";
     }
@@ -407,11 +382,9 @@
       hero.style.display="none";
       store.style.display="none";
       about.style.display="none";
-      contact.style.display="none";
+      contact.classList.add("dn");
       footer.style.display="none";
       lowerfooter.style.display="none";
-      // window.onscroll = function () { window.scrollTo(0, 0); };
-      
     }
 
     if(userInfo){
@@ -422,7 +395,6 @@
     const greet = document.getElementById("greet");
     const specialGreet = document.getElementById("specialGreet");
     specialGreet.style.display="flex";
-    // const userName = localStorage.getItem("userName");
     const userName = sessionStorage.getItem("user-name");
     greet.innerText = `Welcome ${userName}`;
     console.log(`Name of user is ${userName}`);
@@ -473,21 +445,20 @@ const form = document.getElementById("contactForm");
 form.addEventListener("submit", handleSubmit);
 
 // greetings
-
 const currentTime = new Date().getHours();
 const aboutGreet = document.getElementById("aboutGreet");
 console.log(aboutGreet);
 
 if (currentTime >= 5 && currentTime < 12) {
-  aboutGreet.innerText = "Good morning ";
+  aboutGreet.innerText = "Good morning";
 } else if (currentTime >= 12 && currentTime < 18) {
-  aboutGreet.innerText = "Good afternoon ";
+  aboutGreet.innerText = "Good afternoon";
+} else if (currentTime >= 18 && currentTime < 20) {
+  aboutGreet.innerText = "Good evening";
 } else {
-  aboutGreet.innerText = "Good night ";
+  aboutGreet.innerText = "Good night";
 }
 
-
-    
   </script>
 
   
